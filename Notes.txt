@@ -1,0 +1,1566 @@
+Author block:
+"This should be my second self-learning programming project that I am doing. I am learning this from a video from FreeCodeCamp. For these notes, I am going to be doing an outline consisting of:
+	The finished code of the chapter
+	The explanation of each line of the code
+	If something needs to be said/explained about the code."
+Goals:
+	" My goal is to be able to make a basic copy of three Wikipedia pages that reference themselves using all the things I learn."
+Recorded dates:
+	" Start: 5/1/2023
+
+
+
+Video resorce:
+	"https://www.youtube.com/watch?v=kUMe1FH4CHE&t=5488s&ab_channel=freeCodeCamp.org"
+
+Chapter 1 Start --------
+
+Chapter 1 Code:
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <title>My First Web Page </title>
+        <style>
+                html{
+                    font-size: 22px
+                }
+                body{
+                    background-color: #333;
+                    color: whitesmoke;
+                }
+        </style>
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+        <p>This is my first web page.</p>
+    </body>
+</html>
+
+Chapter 1 Code Explanation:
+	-<!DOCTYPE html>
+		- Tells the broswer what document type it is.
+		- Not a tag or element.
+	-<html lang="en"> </html>
+		- This is the outline of all HTML code.
+		- lang="en" tells the browser what language the webpage is in.
+		- Needed to prevent output errors.
+	-<head> </head>
+		- Here is where we store metadata.
+		- <meta charset="UTF-8">
+			- This is to tell the browser what character set we are using.
+			- Basically, what character set we are using.
+			- <title> </title>
+				- This will be the name of the webpage, what you see on the tab of the browser.
+			- <style> </style>
+				- Is some CSS code to format the webpage.
+				- It makes the webpage dark mode.
+				- It makes the webpage font size 22 pixels.
+	-<body> </body>
+		- What everything that is shown in the webpage.
+	-<h1> </h1>
+		- Inside the body element.
+		- A heading element.
+	-<p> </p>
+		- Inside the body element.
+		- A paragraph element.
+
+Chapter 1 Notes:
+	- HTML is used for outlining a webpage.
+		- CSS is used for the appearance/presentation of the webpage.
+		- JavaScript is used for the functionality/behavior of the webpage.
+		- However, HTML connects all of these together.
+			- HTML alone will be mainly used in something like reader mode.
+				- Reader mode will show the most important outline of the page, which is what HTML does.
+	- HTML code consists of elements and tags.
+	- Elements are defined by a start tag and an end tag, usually with the format of <element> and </element>.
+	- Doctype is not an HTML element or tag. It just tells the browser what document it is expecting.
+	- <html> </html>
+  		- This is where everything in the HTML code is under, the bread of the sandwich.
+  		- We also need to declare the language of the document to tell the browser and not make it output error codes.
+	- <head> </head>
+  		- This is where we store metadata.
+  		- Metadata is things that are not shown on the webpage but are used by it, such as how to format it, who wrote it, location of images we need, etc.
+Chapter 1 END ----
+
+
+Chapter 2 Start ------
+
+Chapter 2 Code:
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="author" conent="Joe Lam">
+        <meta name="description" content="this page contains all the things I am learning how to create as I learn HTML.">
+        <title>My First Web Page </title>
+        <link rel="icon" href="html5.png" type= "image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+        <p>This is my first web page.</p>
+    </body>
+</html>
+//////////////////////////////////////////////////////////////////////////////
+main.css:
+html{
+    font-size: 22px
+}
+body{
+    background-color: #333;
+    color: whitesmoke;
+}
+
+Chapter 2 Code Explanation:
+
+	-<meta name= "" content="">
+		- The meta tag is used to store data used by the broswer
+		- Name is what the mata tag is describing
+		- Content is the description of the meta tag
+		- Typical meta tags
+			- <meta name="author" content="Joe Lam"
+				- mata data of author
+				- describing the author as Joe Lam
+			- <meta name"description" content="description of website">
+				- meta data of descripiption of page
+				- describing the descripition of the page
+	-<link ref="" href=""type="">
+		- link is to connect something to the code
+		- ref is what is being connected to the code
+		- href is where is it being conncted from
+		- type is what is the file type of it.
+		- <link ref="icon" href="html5.png" type="image/x-icon">
+			- link an icon
+			- from same folder tree named html5.png
+			- with the type of image/x-icon
+		- <link ref="stylesheet" href="main.css" type="text/css">
+			- link a stylesheet
+			- from the same folder tree named main.css
+			- with the type of text/css
+Chapter 2 Notes:
+	- This chapter is about typical meta tags you would see
+	- Meta tags are used by the broswer but not seen on the website
+		- It could be used by soemthting like a search engine to look for our webpage
+Chapter 2 END ------
+
+Chapter 3 Start ------------
+
+Chapter 3 Code:
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="author" content="Joe Lam">
+        <meta name="description" content="this page contains all the things I am learning how to create as I learn HTML.">
+        <title>My First Web Page </title>
+        <link rel="icon" href="html5.png" type= "image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+
+        <hr>
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how I......
+
+            <br>&nbsp;&nbsp;&nbsp;...I learn more about web dev.
+            <br>&nbsp;&nbsp;&nbsp;...I plan out my schedule.
+            <br>&nbsp;&nbsp;&nbsp;...I use resources from <abbr title="Mozilla Developer Network">MDN</abbr>.
+        </p>        
+
+        <hr>
+
+        <h2>I am Also Planning a Vaction</h2>
+        <p>I've been working hard and <em>really need a gataway</em></p>
+        <p>I live in <abbr title="Kansas">KS</abbr>  so I want to visit a beach</p>
+
+        <h3>Place I'd Like to Vist</h3>
+        <p>I've heard good things about the Caribbean.</p>
+        <p>I've Heard good things about going here:</p>
+        <address>
+            1163-1 Azagawa,<br>
+            Fujikawaguchiko, Minamitsuru District,<br>
+            Yamanashi 401-0303, 
+            Japan
+        </address>
+
+
+        <!-- TODO: Add more places-->
+        <h3>Places I Want to Avoid</h3>
+        <p>Anywhere cold.<strong> No way!</strong></p>
+
+
+
+        <hr>
+        &lt;&lt;&lt; &copy; Joe Lam &gt;&gt;&gt;
+
+
+        <hr>
+    </body>
+</html>
+
+Chapter 3 Code Explanation:
+
+	- Block-Level element
+		- Will leave a New Line at the end
+		- <h1></h1>----<h6><h6>
+			- These are title elements
+		- <p></p>
+			- These are paragapgh elements
+		- <address> </address>
+			- Will show the text as a address
+			- Helps the broswer to know it is a address
+	- Inline element
+		- <br>
+			- Will put a return/ New Line.
+		- <hr>
+			- Will put a line accross the line
+		- <abbr title=""> </abbr>
+			- Will make a doted line appear under the text within
+			- When hovered, the text in title will appear
+		- <em></em>
+			- Will italicized the word
+		- <strong></strong>
+			- Will bold the text within.
+	- HTML Entities
+		- Some characters are reserved in HTML so we need to use HTML entities
+			-&lt;
+				-"<"
+			-&gt;
+				-">"
+			-&copy;
+				- copyright sign
+			-&nbsp;
+				- tab
+			-https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references
+				- Some more entities
+		= HTML comment
+			- <!-- -->
+				
+
+Chapetr 3 notes:
+	- Things in the body element is like writing a book 
+		- header elements are like titles and paragaph elements are body of texts
+		- So, that's how we are suppose to struture our webpage.
+		- CSS will later decide how our webpage looks
+	- Whitespace Collapsing
+		- In html white spaces are ignored
+			- if you typed spaces or newlines it will be ignored.
+Chapter 3 END --------
+
+
+
+Chapter 4 Start -----------
+
+
+Chapter 4 Code:
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="author" content="Joe Lam">
+        <meta name="description" content="this page contains all the things I am learning how to create as I learn HTML.">
+        <title>My First Web Page </title>
+        <link rel="icon" href="html5.png" type= "image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <h1>Hello World!</h1>
+
+        <hr>
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how I......</p>  
+        <ol>
+           <li>...I learn more about web dev.</li>
+           <li>...I plan out my schedule.</li>
+           <li>...I use resources from <abbr title="Mozilla Developer Network">MDN</abbr>.</li>
+        </ol>
+              
+
+
+        <hr>
+
+        <h2>I am Also Planning a Vaction</h2>
+        <p>I've been working hard and <em>really need a gataway</em></p>
+        <p>I live in <abbr title="Kansas">KS</abbr>  so I want to visit a beach</p>
+
+        <h3>Place I'd Like to Vist</h3>
+        <ul>
+        <li><p>I've heard good things about the Caribbean.</p></li>
+        <li><p>I've Heard good things about going here:</p>
+        <address>
+            1163-1 Azagawa,<br>
+            Fujikawaguchiko, Minamitsuru District,<br>
+            Yamanashi 401-0303, 
+            Japan
+        </address>
+        </li>
+        </ul>
+
+        <!-- TODO: Add more places-->
+        <h3>Places I Want to Avoid</h3>
+        <dl>
+            <dt>North Pole</dt>
+            <dd>I hear this is <strong>cold</strong>!</dd>
+
+            <dt>South Pole</dt>
+            <dd>This is also cold</dd>
+
+            <dt>Mountain Tops</dt>
+            <dd>These are also cold</dd>
+        </dl>
+
+
+
+        <hr>
+        &lt;&lt;&lt; &copy; Joe Lam &gt;&gt;&gt;
+
+
+        <hr>
+    </body>
+</html>
+
+Chapter 4 Code Explanation:
+
+	- Lists
+		- Unordered List
+			- <ul> </ul>
+				- <li>
+					- List item
+				- Items  on list are bulletpointed
+		- Ordered List
+			- <ol> </ol>
+				-<li>
+					- List item
+				- Items on list are numbered
+		- Description List
+			- <dl> </dl>
+				-<dt> </dt>
+					-Description Title
+				-<dd> </dd>
+					- Definition Description
+				- Title comes first with no format
+				- Description is next while being indented
+Chapter 4 Notes:
+	- This chapter is about list
+	- First you need to state the type of list you want <ie> ordered list or unordered list or Descripition list
+		- Then you need to put each list item in the format of the list
+Chapter 4 END -------
+
+Chapter 5 Start -------
+
+Chapter 5 Code:
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="author" content="Joe Lam">
+        <meta name="description" content="this page contains all the things I am learning how to create as I learn HTML.">
+        <title>My First Web Page </title>
+        <link rel="icon" href="html5.png" type= "image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <h1>My Goals for the Year</h1>
+
+
+        <hr>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#html">Learn HTML</a>
+                </li>
+                <li>
+                    <a href="#vacation">Planning a Vacation</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="html">
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how I......</p>  
+        <ol>
+           <li>...I learn more about web dev.</li>
+           <li>...I plan out my schedule.</li>
+           <li>...I use resources from <abbr title="Mozilla Developer Network">
+            <a href="https://developer.mozilla.org/en-US/">  MDN</a></abbr>.</li>
+        </ol>
+        </section>
+
+
+        <hr>
+
+        <section id="vaction">
+        <h2>I am Also Planning a Vaction</h2>
+        <p>I've been working hard and <em>really need a gataway</em></p>
+        <p>I live in <abbr title="Kansas">KS</abbr>  so I want to visit a beach</p>
+
+        <h3>Place I'd Like to Vist</h3>
+        <ul>
+        <li><p>I've heard good things about the Caribbean.</p></li>
+        <li><p>I've Heard good things about going here:</p>
+        <address>
+            1163-1 Azagawa,<br>
+            Fujikawaguchiko, Minamitsuru District,<br>
+            Yamanashi 401-0303, 
+            Japan
+        </address>
+        </li>
+        </ul>
+        </section>
+
+        <!-- TODO: Add more places-->
+        <h3>Places I Want to Avoid</h3>
+        <dl>
+            <dt>North Pole</dt>
+            <dd>I hear this is <strong>cold</strong>!</dd>
+
+            <dt>South Pole</dt>
+            <dd>This is also cold</dd>
+
+            <dt>Mountain Tops</dt>
+            <dd>These are also cold</dd>
+        </dl>
+
+
+
+        <hr>
+        &lt;&lt;&lt; &copy; <a href="about.html">Joe Lam</a> &gt;&gt;&gt;
+        <p><a href="#">Back to Top</a></p>
+
+
+        <hr>
+    </body>
+</html>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+about.html
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="author" content="Joe Lam">
+        <meta name="description" content="hi, I'm Joe Lam. This page is about me">
+        <title>About me</title>
+        <link rel="icon" href="html5.png" type= "image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <h1>Hi, I'm Joe Lam</h1>
+
+        <hr>
+       
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores beatae ducimus odit impedit fugiat amet quis ratione quas consequatur debitis sequi labore ipsam, harum nobis itaque perspiciatis sunt, commodi accusamus?</p>
+
+        <hr>
+
+        <ul>
+            <li> Download an <a href="html5.png" download >HTML5 favicon</a></li>
+            <li>Contact me at <a href="mailto:jnl.joe.lam@gmail.com">my email address</a></li>
+            <li>Dail <a href="tel:6823132574">my phone number</a></li>
+            <li>Open <a href="https://www.google.com/" target="_blank">Google</a> in a new tab</li>
+        </ul>
+
+
+
+        <hr>
+        &lt;&lt;&lt; &copy; <a href="about.html">Joe Lam</a> &gt;&gt;&gt;
+        <p>
+            <a href="/">Back to Home</a>
+        </p>
+
+
+        <hr>
+    </body>
+</html>
+
+Chapter 5 Code Explanation:
+	- The anchor element
+		- Creates hyperlinks to websites, files, emails, and location on the page
+		- <nav> </nav>
+			- Navagation area
+			- <a href="#(id)"></a>
+				-need a section bookmark
+					- <section id = ""> </section>
+						- A bookmark to a place on the page
+			- Moves screen to the marked place
+		- <a href="Somewebsite"></a>
+			- Links to a website address
+			- Or a internal webpage
+				- attributes
+					- <a href="Somewebsite" target="_blank"></a>
+						- Will open page in a new tab
+		- <a href= "#"> </a>
+			- Back to top of page
+		- <a href= "/"> </a>
+			- Back to the root page
+		- <a href = "somefile" download> </a>
+			- A download link
+			- When clicked will promp to download
+		- <a href="mailto: someemail"> </a>
+			- Will link a email
+			- Open default email system when clicked
+		- <a href= "tel:somephonenumber"> </a>
+			- Will link a phone number
+			- Open default phone system when clicked
+
+Chapter 5 Notes:
+	- This chapter is about hyperlinks
+
+	- Link naming Rule
+		- Avoid pringting the full webpage name
+		- Avoid "links to " phrase
+			-  We know it's a link
+		- Keep your link text short
+			- Exact topic
+			- Not sentences
+		- Avoid "Click here
+			- It provides no meaning
+	- href Email address are not recommended
+		- websites spiders can find it
+		- Use a form instead
+	
+	
+Chapter 5 END --------------
+
+
+Chapter 6 Start -------
+
+Chapter 6 Code:
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="author" content="Joe Lam">
+        <meta name="description" content="this page contains all the things I am learning how to create as I learn HTML.">
+        <title>My First Web Page </title>
+        <link rel="icon" href="html5.png" type= "image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <h1>My Goals for the Year</h1>
+
+
+        <hr>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#html">Learn HTML</a>
+                </li>
+                <li>
+                    <a href="#vacation">Planning a Vacation</a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <section id="html">
+        <h2>I'm Ready to Learn HTML</h2>
+        <p>This is my first web page</p>
+        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
+        <figure>
+            <figcaption>
+                an Example of HTML5 code
+            </figcaption>
+            <p>
+                <code>&lt;h1&gt;Hellow World!&lt;/h1&gt;</code>
+            </p>
+        </figure>
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how I......</p>  
+        <ol>
+           <li>...I learn more about web dev.</li>
+           <li>...I plan out my schedule.</li>
+           <li>...I use resources from <abbr title="Mozilla Developer Network">
+            <a href="https://developer.mozilla.org/en-US/">  MDN</a></abbr>.</li>
+        </ol>
+        </section>
+
+
+        <hr>
+        
+        <section id="vaction">
+        <h2>I am Also Planning a Vaction</h2>
+        <p>I've been working hard and <em>really need a gataway</em></p>
+        <p>I live in <abbr title="Kansas">KS</abbr>  so I want to visit a beach</p>
+
+        <h3>Places I'd Like to Vist</h3>
+        <ul>
+        <li>
+            <p>I've heard good things about the Caribbean.</p>
+            <figure>
+                <img src="img/caribbean.jpg" alt="Caribbean Beach" title="I want to visit a caribbean beach" width="400" height="225" loading="lazy">
+                <figcaption>
+                    Caribbean Beach Getaway
+                </figcaption>
+            </figure>
+        </li>
+        <li><p>I've Heard good things about going here:</p>
+        <address>
+            1163-1 Azagawa,<br>
+            Fujikawaguchiko, Minamitsuru District,<br>
+            Yamanashi 401-0303, 
+            Japan
+        </address>
+        <figure>
+            <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'Clock Somewhere!" width="400" height="267" loading="lazy">
+        </figure>
+        </li>
+        </ul>
+        </section>
+
+        <!-- TODO: Add more places-->
+        <h3>Places I Want to Avoid</h3>
+        <dl>
+            <dt>North Pole</dt>
+            <dd>I hear this is <strong>cold</strong>!</dd>
+            
+            <dt>South Pole</dt>
+            <dd>This is also cold</dd>
+
+            <dt>Mountain Tops</dt>
+            <dd>These are also cold</dd>
+        </dl>
+
+
+
+        <hr>
+        &lt;&lt;&lt; &copy; <a href="about.html">Joe Lam</a> &gt;&gt;&gt;
+        <p><a href="#">Back to Top</a></p>
+
+
+        <hr>
+    </body>
+</html>
+
+Chapter 6 Code Explanation:
+	
+	- <img scr="" alt="">
+		- Put an image on the webpage
+		- scr = is location of image
+		- alt = is if the image dosen't show up, what would be it's name
+		- Other attrubite
+			- Width
+				- Tell the broswer what the width is
+			- Height
+				- Tell the broswer what the height is
+			- Title
+				- When horvered, it will show this text
+				- Don't put important information here, some might not be able to see
+			- Loading
+				- When will the image Load when scrolling through the page
+				- Lazy
+					- Save resorces when loading the page
+				- Eager
+					- will be defaulted if not specified
+
+	- <figure> </figure>
+		- a container for content
+		- <figcaption> </figcaption>
+			- Will write a paragph for the content of figure
+			- Can only be at the beginging or end
+	-<code> </code>
+		- Show a piece of computer code
+			- We still need to use HTML enitites
+
+
+
+Chapter 6 Notes:
+	- This chapter is images in our webpage
+	- Width and Height was once requried but then wasn't, however, now it is making a comeback as google dev says it is now recommened
+	- Image Resorces
+		- placeholder.com
+			- place holder for images
+		- Unsplash.com
+			- Free images
+		-Pexels.com
+			- Free images
+		-Pixabay.com
+			- Free images
+		- Irfanview
+			- Editor Software
+		- Tinypng.com
+			- Make the image size smaller
+	
+
+Chapter 6 END --------------
+
+Chapter 7 Start --------
+
+Chapter 7 Code ----------
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="author" content="Joe Lam" >
+    <meta
+      name="description"
+      content="this page contains all the things I am learning how to create as I learn HTML."
+    >
+    <title>My First Web Page</title>
+    <link rel="icon" href="html5.png" type="image/x-icon" >
+    <link rel="stylesheet" href="main.css" type="text/css" >
+  </head>
+
+  <body>
+    <header>
+      <h1>My Goals for the Year</h1>
+      <nav aria-labelledby="primary-navigation">
+        <h2 id="primary-navigation">Primary-Navigation</h2>
+        <ul>
+          <li>
+            <a href="#html">Learn HTML</a>
+          </li>
+          <li>
+            <a href="#vacation">Planning a Vacation</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <hr>
+    <main>
+      <article id="html">
+        <h2>I'm Ready to Learn HTML</h2>
+        <p>This is my first web page</p>
+        <section>
+          <h3>HTML5</h3>
+          <img
+            src="img/html_logo_300x300.png"
+            alt="HTML5 Logo"
+            title="I am learning HTML5"
+            width="300"
+            height="300"
+          >
+          <figure>
+            <figcaption>an Example of HTML5 code</figcaption>
+            <p>
+              <code>&lt;h1&gt;Hellow World!&lt;/h1&gt;</code>
+            </p>
+          </figure>
+        </section>
+        <section>
+          <h3>My Daily Schedule</h3>
+          <p>Let me tell you how I......</p>
+          <ol>
+            <li>...I learn more about web dev.</li>
+            <li>...I plan out my schedule.</li>
+            <li>
+              ...I use resources from
+              <abbr title="Mozilla Developer Network">
+                <a href="https://developer.mozilla.org/en-US/"> MDN</a></abbr
+              >.
+            </li>
+          </ol>
+          <aside>
+            <details>
+              <summary>
+                Guess the <mark>number of hours</mark> I code per day
+              </summary>
+              <p>
+                I start at <time datetime="08:00">8 am</time> and I wirte code
+                for <time datetime="PT3H">3 hours</time> every morning.
+              </p>
+            </details>
+          </aside>
+        </section>
+      </article>
+
+      <hr>
+
+      <article id="vaction">
+        <h2>I am Also Planning a Vaction</h2>
+        <p>I've been working hard and <em>really need a gataway</em></p>
+        <p>
+          I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach
+        </p>
+        <section>
+          <h3>Places I'd Like to Vist</h3>
+          <ul>
+            <li>
+              <p>I've heard good things about the Caribbean.</p>
+              <figure>
+                <img
+                  src="img/caribbean.jpg"
+                  alt="Caribbean Beach"
+                  title="I want to visit a caribbean beach"
+                  width="400"
+                  height="225"
+                  loading="lazy"
+                >
+                <figcaption>Caribbean Beach Getaway</figcaption>
+              </figure>
+            </li>
+            <li>
+              <p>I've Heard good things about going here:</p>
+              <address>
+                1163-1 Azagawa,<br>
+                Fujikawaguchiko, Minamitsuru District,<br>
+                Yamanashi 401-0303, Japan
+              </address>
+              <figure>
+                <img
+                  src="img/vacation.jpg"
+                  alt="Cancun Vacation"
+                  title="It's 5 o'Clock Somewhere!"
+                  width="400"
+                  height="267"
+                  loading="lazy"
+                >
+              </figure>
+            </li>
+          </ul>
+        </section>
+        <!-- TODO: Add more places-->
+        <section>
+          
+          <h3>Places I Want to Avoid</h3>
+          <dl>
+            <dt>North Pole</dt>
+            <dd>I hear this is <strong>cold</strong>!</dd>
+
+            <dt>South Pole</dt>
+            <dd>This is also cold</dd>
+
+            <dt>Mountain Tops</dt>
+            <dd>These are also cold</dd>
+          </dl>
+        </section>
+      </article>
+    </main>
+
+    <hr>
+    <footer>
+      <p>&lt;&lt;&lt; &copy; <a href="about.html">Joe Lam</a> &gt;&gt;&gt;</p>
+      <p><a href="#">Back to Top</a></p>
+    </footer>
+
+    <hr>
+  </body>
+</html>
+
+Chapter 7 Code Explanation:
+
+	-<nav> </nav>
+		- attributes
+			- aria-label
+				- You can just input the label for the nav
+			- aria-labellebay
+				- needs a <h> element with attribute of id 
+					-make aria-labllebay and the id in the <h> the same
+						- this will name the nav element as the text within the <h> element
+	- <header> </header>
+		- Can be more than one
+		- this is the topic of the page
+		- the introduction paragraph
+	- <main> </main>
+		- only one in a page
+		- this is the main content of the page
+	- <footer> </footer>
+		- Can be more than one
+		- This is the ending of the page
+		- The conclusion of the page
+	- <article> </article>
+		- This is a sup-topic of the main topic
+	- <section> </section>
+		- This is the sup-topic of the sup-topic
+	- <aside> </aside>
+		- <details> </details
+			- This is what is inside the dropdown
+			- <summary> </summary>
+				- This is what the dropdown menu will say
+		- This will create a drop down text
+		- Used for information not really important if not needed
+	- <mark> </mark>
+		- This is used to highlight a text
+		- intext element
+	- <time> </time>
+		- attribute 
+			- datetime
+				- this will not change the look of the page but will help the brower know it is a time
+				- for inputes
+					- https://developer.mozilla.org/en-US/docs/Web/API/HTMLTimeElement/dateTime
+Chapter 7 Notes:
+	- This chapter is about semantic tags, semantic tages are useful for definding sections of a page and the layout of these pages while providing meaning to each section
+	- it helps assistive technology read the page and also can help with CSS
+	- <article> and <section> can be used interchangeable depending on the programmerS
+Chapter 7 END ---------
+
+Chapter 8 Start ----
+
+Chapter 8 Code:
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Joe Lam">
+  <meta name="description" content="this page contains all the things I am learning how to create as I learn HTML.">
+  <title>My First Web Page</title>
+  <link rel="icon" href="html5.png" type="image/x-icon">
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <h1>My Goals for the Year</h1>
+    <nav aria-labelledby="primary-navigation">
+      <h2 id="primary-navigation">Primary-Navigation</h2>
+      <ul>
+        <li>
+          <a href="#html">Learn HTML</a>
+        </li>
+        <li>
+          <a href="#vacation">Planning a Vacation</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+  <main>
+    <article id="html">
+      <h2>I'm Ready to Learn HTML</h2>
+      <p>This is my first web page</p>
+      <section>
+        <h3>HTML5</h3>
+        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
+        <figure>
+          <figcaption>an Example of HTML5 code</figcaption>
+          <p>
+            <code>&lt;h1&gt;Hellow World!&lt;/h1&gt;</code>
+          </p>
+        </figure>
+      </section>
+      <section>
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how I......</p>
+        <ol>
+          <li>...I learn more about web dev.</li>
+          <li>...I plan out my schedule.</li>
+          <li>
+            ...I use resources from
+            <abbr title="Mozilla Developer Network">
+              <a href="https://developer.mozilla.org/en-US/"> MDN</a></abbr>.
+          </li>
+        </ol>
+        <aside>
+          <details>
+            <summary>
+              Guess the <mark>number of hours</mark> I code per day
+            </summary>
+            <p>
+              I start at <time datetime="08:00">8 am</time> and I wirte code
+              for <time datetime="PT3H">3 hours</time> every morning.
+            </p>
+          </details>
+        </aside>
+        <br>
+        <table>
+          <caption>My Daily Schedule</caption>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th scope="col">Time</th>
+              <th scope="col">Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Morning</th>
+              <td>
+
+                <time datetime="08:00">8am</time>-
+                <time datetime="11:00">11am</time>
+              </td>
+              <td>Write Code</td>
+            </tr>
+            <tr>
+              <th scope="row">Break</th>
+              <td>
+
+                <time datetime="11:00">11am</time>-
+                <time datetime="12:00">12pm</time>
+              </td>
+              <td>Eat Lunch</td>
+            </tr>
+            <tr>
+              <th scope="row">Afternoon</th>
+              <td>
+                <time datetime="12:00">12pm</time>-
+                <time datetime="17:00">5pm</time>
+              </td>
+              <td>Study for Other Courses</td>
+            </tr>
+            <tr>
+              <th scope="row">Evening</th>
+              <td rowspan="2">All Other Times</td>
+              <td>Free Time</td>
+            </tr>
+            <tr>
+              <th scope="row">Night</th>
+              <td>Sleep</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">And that's what I do every day, 5 days a week just eat, sleep, code ...and recharge!</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </article>
+
+    <hr>
+
+    <article id="vaction">
+      <h2>I am Also Planning a Vaction</h2>
+      <p>I've been working hard and <em>really need a gataway</em></p>
+      <p>
+        I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach
+      </p>
+      <section>
+        <h3>Places I'd Like to Vist</h3>
+        <ul>
+          <li>
+            <p>I've heard good things about the Caribbean.</p>
+            <figure>
+              <img src="img/caribbean.jpg" alt="Caribbean Beach" title="I want to visit a caribbean beach" width="400"
+                height="225" loading="lazy">
+              <figcaption>Caribbean Beach Getaway</figcaption>
+            </figure>
+          </li>
+          <li>
+            <p>I've Heard good things about going here:</p>
+            <address>
+              1163-1 Azagawa,<br>
+              Fujikawaguchiko, Minamitsuru District,<br>
+              Yamanashi 401-0303, Japan
+            </address>
+            <figure>
+              <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'Clock Somewhere!" width="400"
+                height="267" loading="lazy">
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <!-- TODO: Add more places-->
+      <section>
+
+        <h3>Places I Want to Avoid</h3>
+        <dl>
+          <dt>North Pole</dt>
+          <dd>I hear this is <strong>cold</strong>!</dd>
+
+          <dt>South Pole</dt>
+          <dd>This is also cold</dd>
+
+          <dt>Mountain Tops</dt>
+          <dd>These are also cold</dd>
+        </dl>
+      </section>
+    </article>
+  </main>
+
+  <hr>
+  <footer>
+    <p>&lt;&lt;&lt; &copy; <a href="about.html">Joe Lam</a> &gt;&gt;&gt;</p>
+    <p><a href="#">Back to Top</a></p>
+  </footer>
+
+  <hr>
+</body>
+
+</html>
+
+
+-------------------------------------------
+main.css
+
+html{
+    font-size: 22px
+}
+body{
+    background-color: #333;
+    color: whitesmoke;
+}
+
+a{
+    color: aliceblue
+}
+a:visited{
+    color: lightgray
+}
+a:hover, a:active{
+    color:#eee
+}
+table, tr, th, td, caption {
+    border: 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+
+Chapter 8 Code Explanation:
+	- <table> </table>
+		- <tr></tr>
+			- Table Row element
+			- <th> </th>
+				- Table Header element
+				- Will be centered and bold
+				- Attribute
+					- Scope
+						- How the header relates to the table
+							- ie. row/col
+							- Is rocommended to use
+			- <td> </td>
+				- Table data cell element
+				- Can use &nbsp; to skip a cell
+				- Attribute 
+					- rowspan
+						- Will merge the number of row listed
+		- <caption> </caption>
+			- Will show on page
+			- Tell user if they want to read the table or not
+			- Merge all collum
+		- <thead> </thead>
+			- A head for table
+		- <tbody> </tbody>
+			- A body for table
+		- <tfoot> </tfoot>
+			- A footer for table
+Chapter 8 Notes:
+	- This chapters is about tables
+	- Most of what we do in HTML5 will not look like a table but with tiny bit of css will.
+	- Some people in the past used tables to strucure the whole webpage
+		- Do not do
+	- Table elements do not expan to take the whole wigth of the page like most other element
+Chapter 8 END ------------
+
+Chapter 9 Start -----
+
+Chapter 9 Code:
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Joe Lam">
+  <meta name="description" content="this page contains all the things I am learning how to create as I learn HTML.">
+  <title>My First Web Page</title>
+  <link rel="icon" href="html5.png" type="image/x-icon">
+  <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+
+<body>
+  <header>
+    <h1>My Goals for the Year</h1>
+    <nav aria-labelledby="primary-navigation">
+      <h2 id="primary-navigation">Primary-Navigation</h2>
+      <ul>
+        <li>
+          <a href="#html">Learn HTML</a>
+        </li>
+        <li>
+          <a href="#vacation">Planning a Vacation</a>
+        </li>
+        <li>
+          <a href="#contact">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+  <main>
+    <article id="html">
+      <h2>I'm Ready to Learn HTML</h2>
+      <p>This is my first web page</p>
+      <section>
+        <h3>HTML5</h3>
+        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
+        <figure>
+          <figcaption>an Example of HTML5 code</figcaption>
+          <p>
+            <code>&lt;h1&gt;Hellow World!&lt;/h1&gt;</code>
+          </p>
+        </figure>
+      </section>
+      <section>
+        <h3>My Daily Schedule</h3>
+        <p>Let me tell you how I......</p>
+        <ol>
+          <li>...I learn more about web dev.</li>
+          <li>...I plan out my schedule.</li>
+          <li>
+            ...I use resources from
+            <abbr title="Mozilla Developer Network">
+              <a href="https://developer.mozilla.org/en-US/"> MDN</a></abbr>.
+          </li>
+        </ol>
+        <aside>
+          <details>
+            <summary>
+              Guess the <mark>number of hours</mark> I code per day
+            </summary>
+            <p>
+              I start at <time datetime="08:00">8 am</time> and I wirte code
+              for <time datetime="PT3H">3 hours</time> every morning.
+            </p>
+          </details>
+        </aside>
+        <br>
+        <table>
+          <caption>My Daily Schedule</caption>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th scope="col">Time</th>
+              <th scope="col">Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Morning</th>
+              <td>
+
+                <time datetime="08:00">8am</time>-
+                <time datetime="11:00">11am</time>
+              </td>
+              <td>Write Code</td>
+            </tr>
+            <tr>
+              <th scope="row">Break</th>
+              <td>
+
+                <time datetime="11:00">11am</time>-
+                <time datetime="12:00">12pm</time>
+              </td>
+              <td>Eat Lunch</td>
+            </tr>
+            <tr>
+              <th scope="row">Afternoon</th>
+              <td>
+                <time datetime="12:00">12pm</time>-
+                <time datetime="17:00">5pm</time>
+              </td>
+              <td>Study for Other Courses</td>
+            </tr>
+            <tr>
+              <th scope="row">Evening</th>
+              <td rowspan="2">All Other Times</td>
+              <td>Free Time</td>
+            </tr>
+            <tr>
+              <th scope="row">Night</th>
+              <td>Sleep</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">And that's what I do every day, 5 days a week just eat, sleep, code ...and recharge!</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </article>
+
+    <hr>
+
+    <article id="vaction">
+      <h2>I am Also Planning a Vaction</h2>
+      <p>I've been working hard and <em>really need a gataway</em></p>
+      <p>
+        I live in <abbr title="Kansas">KS</abbr> so I want to visit a beach
+      </p>
+      <section>
+        <h3>Places I'd Like to Vist</h3>
+        <ul>
+          <li>
+            <p>I've heard good things about the Caribbean.</p>
+            <figure>
+              <img src="img/caribbean.jpg" alt="Caribbean Beach" title="I want to visit a caribbean beach" width="400"
+                height="225" loading="lazy">
+              <figcaption>Caribbean Beach Getaway</figcaption>
+            </figure>
+          </li>
+          <li>
+            <p>I've Heard good things about going here:</p>
+            <address>
+              1163-1 Azagawa,<br>
+              Fujikawaguchiko, Minamitsuru District,<br>
+              Yamanashi 401-0303, Japan
+            </address>
+            <figure>
+              <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'Clock Somewhere!" width="400"
+                height="267" loading="lazy">
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <!-- TODO: Add more places-->
+      <section>
+
+        <h3>Places I Want to Avoid</h3>
+        <dl>
+          <dt>North Pole</dt>
+          <dd>I hear this is <strong>cold</strong>!</dd>
+
+          <dt>South Pole</dt>
+          <dd>This is also cold</dd>
+
+          <dt>Mountain Tops</dt>
+          <dd>These are also cold</dd>
+        </dl>
+      </section>
+    </article>
+    <hr>
+    <article id="contact">
+      <h2>Contact me</h2>
+      <p>I'd really like to hear from you!</p>
+
+
+      <form action="https://httpbin.org/get" method="get">
+        <fieldset>
+          <legend>Personal Info</legend>
+        <p>
+        <label for="Firstname">First Name</label>
+        <input type="text" name="Firstname" id="Firstname" placeholder="Jane" autocomplete="on" required >
+      </p>
+      <p>
+        <label for="Lastname">Last Name</label>
+        <input type="text" name="Lastname" id="Lastname" placeholder="Doe" autocomplete="on" required >
+      </p>
+      <p>
+        <label for="Password">Password</label>
+        <input type="password" name="Password" id="Password" placeholder="Your Secret" autocomplete="on" required >
+      </p>
+      <p>
+        <label for="Phone">Phone</label>
+        <input type="tel" name="Phone" id="Phone" placeholder="8888888888" autocomplete="on" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required >
+      </p>
+      <p>
+        <label for="DECADE">Favorite Decade</label>
+        <input type="number" name="DECADE" id="DECADE" min="1950" max="2020" step="10" value="1980" >
+      </p>
+
+
+      <p>
+        <label for="coffee">Favorite Coffee:</label>
+        <select name="coffee" id="coffee" multiple size="5">
+        <optgroup label="Coffees">
+          <option value="regular coffee">Regular Coffee</option>
+          <option value="ice coffee">Ice Coffee</option>
+        </optgroup>
+        <optgroup label="Espresso Drinks">
+          <option value="latte">Latte</option>
+          <option value="cappuccino">Cappuccino</option>
+          <option value="cortado">Cortado</option>
+          <option value="americano">Americano</option>
+        </optgroup>
+          <option value="other" >Other</option>
+          
+        </select>
+      </p>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>What is your favorite food?</legend>
+      <p>
+        <input type="radio" name="food" id="tacos" value="tacos">
+        <label for="tacos">Taacos</label>
+      </p>
+      <p>
+        <input type="radio" name="food" id="pizza" value="pizza">
+        <label for="pizza">Pizza</label>
+      </p>
+      <p>
+        <input type="radio" name="food" id="other" value="other">
+        <label for="other">Other</label>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Do you have pets?</legend>
+      <p>
+        <input type="checkbox" name="pets" id="dog" value="dog">
+        <label for="dog">Dog</label>
+      </p>
+      <p>
+        <input type="checkbox" name="pets" id="cat" value="cat">
+        <label for="cat">Cat</label>
+      </p>
+      <p>
+        <input type="checkbox" name="pets" id="fish" value="fish">
+        <label for="fish">Fish</label>
+      </p>
+      <p>
+        <input type="checkbox" name="pets" id="otherPet" value="otherPet">
+        <label for="otherPet">Other</label>
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Send Me A Note</legend>
+      <label for="message">Your Message:</label>
+      <br>
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+    </fieldset>
+    <br>
+    <button type="submit">Submit</button>
+    <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+    <button type="reset">Reset</button>
+
+      </form>
+    </article>
+
+  </main>
+
+  <hr>
+  <footer>
+    <p>&lt;&lt;&lt; &copy; <a href="about.html">Joe Lam</a> &gt;&gt;&gt;</p>
+    <p><a href="#">Back to Top</a></p>
+  </footer>
+
+  <hr>
+</body>
+
+</html>
+
+
+Chapter 9 Code explanation:
+	- <form> </form>
+		- Attrbute
+			- Action 
+				- Defines what to do what the form is submitted
+			- Method
+				- Specifies how to send the form-data
+		- <fieldset> </fieldset>
+			- Like a article in a webpagae but for form
+			- Will box everything within on the webpage
+			- <legend> </legend>
+				- Will name the fieldset on the webpage
+	
+		- <label> </label>
+			- Text show infront of the input box
+			- attribute
+				- For
+					- Will be needed for name of input <id> and <name>
+		
+		- <input>
+			- What kind of information are we expecting
+			- Atribute
+				- type
+					- text
+						- A input rectangle
+
+					- password
+						- A password rectangle that dots letters
+					- tel
+						- A phone number rectangle
+					- number
+						- A number rectangle
+
+					- radio
+						- A checkbox but only one can be selected
+					- checkbox
+						- A checkbox but mutitple can be selected
+				- name
+					- Will how it be identifyed at the server
+				- id
+					- Same as label <for>
+				- Placeholder
+					- Will show as invisable text in the text box
+				- autocomplete
+					- Will remember last input and suggest it
+					- on or off
+				- pattern
+					- It is a format specifer requried for the input
+				- autofocus
+					- When the webpage is open, it will default move here and it will already be highlighted
+					- Can only be one on a page
+				- list 
+					- Will make a autocorrected textbox list of items you can pick from
+					- Set it equal to a datalist <id>
+					- <datalist> </datalist
+						- Make a list of options
+						- Attruibute	
+							- id 
+								- Label of list to call it by 
+		- <select> </select>
+			- Create a drop down menu
+			- Attruibute
+				- name
+					- Same as label <for>
+				- id
+					- Same as label <for>
+				- multiple 
+					- Will allow more than one
+				- size
+					- How many whill show at once
+			- <optgroup> </optgroup>
+				- Inside the dropdown menu, group these under a unselectable name 
+				- Attruibute
+					- label
+						- Name the group on page
+			- <option> </option>
+				- A option of the dropdown
+				- Text within will be displayed
+				- Attruibute
+					- value
+						- What will be the name of the information tranfered
+					- selected
+						- What will be the default selected
+
+		- <textarea> </textarea>
+			- will create a text box
+				- Attruibute
+					- name
+					- id
+					- cols
+					- rows
+					- placeholder
+		- <button> </button>
+			- Create a button
+			- Attruibute 
+				- type
+					- submit
+						- will submit form
+					- reset
+						- reset the form
+					- formaction
+						- will override the form <action> to send it to a new place
+					- formmethod
+						- will override the form <method>
+Chapter 9 Notes:
+	- This chapter is about forms
+		- Forms is submit to a server
+			- we can use the https://httpbin.org/get
+		- method 
+			- Diffrent method will send the information diffrently
+	- There are many diffrent kinds of form that can be found online:
+		- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+Chapter 9 END ----------------
+			
+
+
+
