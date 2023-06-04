@@ -1533,6 +1533,7 @@ Chapter 9 Code explanation:
 
 		- <textarea> </textarea>
 			- will create a text box
+			- Should put <br> after label to make text box go under
 				- Attruibute
 					- name
 					- id
